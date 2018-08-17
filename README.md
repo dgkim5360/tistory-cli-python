@@ -68,7 +68,55 @@ USAGE:
 ## Step-by-step Tutorial
 
 1. 로그인을 합니다 (Oauth Setting 참조).
-2. `tistory category <blog_name>`을 통해 본인 블로그의 카테고리 아이디를 확인합니다.
-3. `<slug>.md` 파일을 Git commit message처럼 작성합니다 (첫 줄 제목, 한 줄 띄우고 내용 시작). 글 내용은 Markdown 형식에 맞추어 작성합니다.
-4. `tistory post <blog_name> <category_id> <slug>.md`로 포스팅을 한 후, Tistory에서 확인합니다.
+2. `tistory category <blog_name>`을 통해 본인 블로그의 카테고리 아이디를 확인합니다.  
+  ```bash
+  $ tistory category dgkim5360
+  ID      Name
+  --      ----
+  880607  HTML+CSS
+  880608  Django
+  886608  Bootstrap
+  892553  Python
+  892554  Javascript
+  894029  GNU-Linux
+  896354  뻘글
+  897315  Cloud
+  907471  etc
+  908711  Front-end
+  912687  Machine Learning
+  931755  NBA
+  933686  Elastic
+  937655  Flask
+  951477  Javascript
+  959045  Travelogue
+  990157  Rust
+  ```
+3. `<slug>.md` 파일을 Git commit message처럼 작성합니다 (첫 줄 제목, 한 줄 띄우고 내용 시작). 글 내용은 Markdown 형식에 맞추어 작성합니다. (파일명: `tistory-cli-test.md`)
+  ```markdown
+  [제목]Hello Tistory!
+
+  # Tistory-cli 테스트 중입니다.
+
+  아래는 list
+  * hello
+    * tistory
+    * bye
+  * tistory
+
+  1. hello
+    1. tistory
+    1. bye
+  1. tistory
+
+  이것은 [링크](http://dgkim5360.tistory.com)
+
+  Inline `code text`도 써봅니다.
+  ```
+4. `tistory post <blog_name> <category_id> <slug>.md`로 포스팅을 한 후, Tistory에서 확인합니다. 작업이 완료되면 해당 Markdown 문서의 파일 앞에 Tistory 시스템의 ID값이 붙습니다 (아래 예제에서는 191이 붙었습니다).
+  ```bash
+  $ tistory post dgkim5360 896354 path/to/tistory-cli-test.md
+
+  $ ls path/to
+  191_tistory-cli-test.md
+  ```
 5. 추가적으로 필요한 이미지 업로드, 태그 추가, 공개 설정은 Tistory에서 해결합니다.
