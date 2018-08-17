@@ -7,7 +7,7 @@ from . import token
 URL_TISTORY_TOKEN = 'https://www.tistory.com/oauth/access_token'
 
 
-def get_access_token(code: str) -> bytes:
+def get_access_token(code: str):
     client_id = token.get_client_id()
     client_secret = token.get_client_secret()
     host, port = token.get_redirect_uri()
