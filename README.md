@@ -34,9 +34,9 @@ $ python setup.py install
 * 소스코드, 환경변수 등에 credential를 저장하지 않고, [운영 체제 레벨의 비밀 저장소](https://specifications.freedesktop.org/secret-service)에 저장합니다.
 * Git commit message 스타일로 제목/내용 구분해서 Markdown 파일을 작성해서 Tistory에 비공개글로 업로드합니다.
 * 카테고리와 slug는 설정 가능합니다.
-* 공개글로 업로드 __하지 않습니다__.
-* 이미지 업로드 __하지 않습니다__.
-* 태그 추가 __하지 않습니다__.
+* 공개글로 업로드하는 것을 __지원하지 않습니다__.
+* 이미지 업로드를 __지원하지 않습니다__.
+* 태그 추가를 __지원하지 않습니다__.
 
 ## Oauth Setting
 
@@ -44,7 +44,6 @@ $ python setup.py install
 2. Callback 경로를 `http://localhost:8888`(기본값, 다른 포트를 원할 시 `.redirect-uri` 파일에 해당 주소를 일치하게 써 놓으면 됨)로 설정해서 클라이언트 등록을 완료합니다.
 3. `tistory login` 실행하면 (OS 계정 비밀번호를 요구할 수도 있습니다), 로그인할 페이지를 콘솔에 띄워줍니다.
 4. 브라우저로 해당 주소로 들어가서 Tistory 로그인을 해서 API 토큰을 받아옵니다.
-5. 콘솔에 다음과 같이 나오면 로그인이 끝납니다.
 
 ## Usage
 
